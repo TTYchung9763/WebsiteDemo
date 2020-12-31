@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>the title</title>
+
+   <script type="text/javascript" 
+   src="jslib/jquery-1.11.1.js"></script>
+   <script type="text/javascript" language="javascript">
+   
+   $(document).ready(function() {
+     $("div").hide();
+     $("#Apple").click(function(){
+      $("div").siblings("#S").hide();
+      $("div").siblings("#A").addClass("selected_red");
+      $("div").siblings("#A").show();
+     });
+     $("#Samsung").click(function(){
+         $("div").siblings("#A").hide();
+         $("div").siblings("#S").addClass("selected_blue");
+         $("div").siblings("#S").show();
+     });
+   });
+   </script>
+   <style>
+      .selected_red { color:red; }
+      .selected_blue {  color:blue; }
+  </style>
+
+</head>
+<body>
+<input type="button" id="Apple" value="Apple"/>
+<input type="button" id="Samsung" value="Samsung"/>
+ <div id="A">
+   <ul>
+     <li>iPhone</li>
+     <li>iPad</li>
+     <li>iPod</li>
+   </ul>
+ </div>
+ <div id="S">
+   <ul>
+     <li>Galaxy Tab</li>
+     <li>Galaxy Note</li>
+     <li>Galaxy S3</li>
+    </ul>
+ </div>
+
+</body>
+</html>
